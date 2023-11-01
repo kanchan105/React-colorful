@@ -1,25 +1,55 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [color,setColor]=useState("olive")
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <div className="w-full h-screen duration-200" style={{backgroundColor:color}}>
+   <div className='fixed flex flex-wrap justify-center bottom-48 inset-x-0 px-2'>
+    <div className='flex flex-wrap justify-center gap-3 shadow-lg bg-white px-3 py-2' >
+      <button onClick={()=>setColor("red")}
+       className='outline-none px-4' style={{background:"red"}}>red
+
+      </button> 
+      <button onClick={()=>setColor("green")}
+       className='outline-none px-4' style={{background:"Green"}}>Green
+
+      </button>
+      <button onClick={()=>setColor("blue")}
+      className='outline-none px-4' style={{background:"blue"}}>blue
+
+      </button>
+      <button onClick={()=>setColor("yellow")}
+       className='outline-none px-4' style={{background:"yellow"}}>yellow
+
+      </button>
+      <button onClick={()=>setColor("grey")}
+      className='outline-none px-4' style={{background:"grey"}}>grey
+
+      </button>
+      <button  onClick={()=>setColor("black")}
+      className='outline-none px-4 text-white' style={{background:"black"}}>black
+
+      </button>
+      <button onClick={()=>setColor("pink")}
+      className='outline-none px-4' style={{background:"Pink"}}>pink
+
+</button>
+<button onClick={()=>setColor("skyblue")}
+className='outline-none px-4' style={{background:"skyblue"}}> skyblue
+
+      </button>
+
     </div>
-  );
+
+   </div>
+
+
+    </div>
+ 
+  
+  )
 }
 
 export default App;
